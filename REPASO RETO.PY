@@ -32,10 +32,38 @@ def generar_informe(lista):
 
 #funcion para mostrar el menu
 def mostrar_menu():
-    pass
+    print("=== Menu Principal ===")
+    print("1. Agregar experimento")
+    print("2. Visualizar experimentos")
+    print("3. Eliminar experimento")
+    print("4. Calcular estadisticas")
+    print("5. Comparar experimentos")
+    print("6. Generar informe")
+    print("7. Salir")
 
 #funcion principal
 def main():
-    pass
+    while True: 
+        mostrar_menu()
+        try:
+            opcion = int(input("Ingrese una opcion: "))
+            if opcion == 1:
+                agregar_experimento(listaDeExperimentos)
+            elif opcion == 2:
+                visualizar_experimentos(listaDeExperimentos)
+            elif opcion == 3:
+                eliminar_experimento(listaDeExperimentos)
+            elif opcion == 4:
+                calcular_estadisticas(listaDeExperimentos)
+            elif opcion == 5:
+                comparar_experimentos(listaDeExperimentos)
+            elif opcion == 6:
+                generar_informe(listaDeExperimentos)
+            elif opcion == 7:
+                print("Gracias por usar el programa")
+                break 
+        except:
+            print("Error: Entrada no valida. Intenta de nuevo")
+
 
 main()
